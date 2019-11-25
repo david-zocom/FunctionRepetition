@@ -25,12 +25,14 @@ namespace FunctionRepetition
 		static int ArrayDiff(int[] array)
 		{
 			int maxSoFar = array[0];
+			int minSoFar = array[0];
 			for (int i = 1; i < array.Length; i++)
 			{
 				if(array[i] > maxSoFar) { maxSoFar = array[i]; }
-
+				if(array[i] < minSoFar) { minSoFar = array[i]; }
 			}
 			Console.WriteLine("Max: " + maxSoFar);
+			Console.WriteLine("Min: " + minSoFar);
 			return 0;
 		}
 	}
