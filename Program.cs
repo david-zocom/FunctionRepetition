@@ -19,7 +19,8 @@ namespace FunctionRepetition
 			// print the result to the console - only when testing
 			// (when done: remove the test array and the printing)
 			int[] array1 = new int[] { 5, 2, 3, 8, 4, -1, 6, 4 };
-			ArrayDiff(array1);
+			int diff = ArrayDiff(array1);
+			Console.WriteLine("The difference is: " + diff);
 		}
 
 		static int ArrayDiff(int[] array)
@@ -31,9 +32,7 @@ namespace FunctionRepetition
 				if(array[i] > maxSoFar) { maxSoFar = array[i]; }
 				if(array[i] < minSoFar) { minSoFar = array[i]; }
 			}
-			Console.WriteLine("Max: " + maxSoFar);
-			Console.WriteLine("Min: " + minSoFar);
-			return 0;
+			return maxSoFar - minSoFar;
 		}
 	}
 }
